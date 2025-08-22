@@ -54,7 +54,8 @@ nav a {
   transition: background-color 0.2s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   background: #2d3748;
   color: #fff;
 }
@@ -66,6 +67,46 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+/* Content sections */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.section-content {
+  background: #1a202c;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  min-height: 300px;
+}
+
+.section-content h2 {
+  margin-top: 0;
+  color: #e2e8f0;
+  font-size: 1.5rem;
+}
+
+.section-content p {
+  color: #cbd5e0;
+  margin-bottom: 1rem;
+}
+
+.section-content ul {
+  color: #cbd5e0;
+  padding-left: 1.5rem;
+}
+
+.section-content li {
+  margin-bottom: 0.5rem;
+}
+
+.section-content strong {
+  color: #e2e8f0;
 }
 
 /* Tab styles */
@@ -109,10 +150,9 @@ main {
   display: none;
 }
 
-.tabs input[type="radio"]:nth-of-type(1):checked ~ .tab-content #panel1,
-.tabs input[type="radio"]:nth-of-type(2):checked ~ .tab-content #panel2,
-.tabs input[type="radio"]:nth-of-type(3):checked ~ .tab-content #panel3,
-.tabs input[type="radio"]:nth-of-type(4):checked ~ .tab-content #panel4 {
+.tabs input[type="radio"]:nth-of-type(1):checked ~ .tab-content #home-panel1,
+.tabs input[type="radio"]:nth-of-type(2):checked ~ .tab-content #home-panel2,
+.tabs input[type="radio"]:nth-of-type(3):checked ~ .tab-content #home-panel3 {
   display: block;
 }
 
@@ -207,7 +247,8 @@ footer {
     color: #2d3748;
   }
   
-  nav a:hover {
+  nav a:hover,
+  nav a.active {
     background: #cbd5e0;
     color: #1a202c;
   }
@@ -232,16 +273,25 @@ footer {
     border: 1px solid #e2e8f0;
   }
   
-  .tab-panel h2 {
+  .section-content {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .tab-panel h2,
+  .section-content h2 {
     color: #2d3748;
   }
   
   .tab-panel p,
-  .tab-panel ul {
+  .tab-panel ul,
+  .section-content p,
+  .section-content ul {
     color: #4a5568;
   }
   
-  .tab-panel strong {
+  .tab-panel strong,
+  .section-content strong {
     color: #2d3748;
   }
   

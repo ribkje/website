@@ -19,133 +19,200 @@
 
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" onclick="showSection('home')">Home</a></li>
+      <li><a href="#about" onclick="showSection('about')">About</a></li>
+      <li><a href="#services" onclick="showSection('services')">Services</a></li>
+      <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="tabs">
-      <input type="radio" id="tab1" name="tab-group" checked>
-      <label for="tab1">Home</label>
+    <!-- Home Section with tabs -->
+    <section id="home-section" class="content-section active">
+      <div class="tabs">
+        <input type="radio" id="home-tab1" name="home-tab-group" checked>
+        <label for="home-tab1">Project Excellence</label>
 
-      <input type="radio" id="tab2" name="tab-group">
-      <label for="tab2">About</label>
+        <input type="radio" id="home-tab2" name="home-tab-group">
+        <label for="home-tab2">Innovation &amp; Quality</label>
 
-      <input type="radio" id="tab3" name="tab-group">
-      <label for="tab3">Services</label>
+        <input type="radio" id="home-tab3" name="home-tab-group">
+        <label for="home-tab3">Future Vision</label>
 
-      <input type="radio" id="tab4" name="tab-group">
-      <label for="tab4">Contact</label>
-
-      <div class="tab-content">
-        <div class="tab-panel" id="panel1">
-          <h2>Welcome Overview</h2>
-          <p>This is a modern static website built with pure HTML5 and CSS. No JavaScript frameworks or complex build processes are needed.</p>
-          <p>The site features a clean, responsive design that works well on both desktop and mobile devices. It uses semantic HTML elements and follows accessibility best practices.</p>
-          <h3>Key Features</h3>
-          <ul>
-            <li>Fully responsive design</li>
-            <li>Dark and light theme support</li>
-            <li>Semantic HTML5 structure</li>
-            <li>CSS-only tabbed navigation</li>
-            <li>Fast loading times</li>
-            <li>Accessible design</li>
-          </ul>
-          <p>All features are implemented using standard web technologies without any external dependencies.</p>
-        </div>
-
-        <div class="tab-panel" id="panel2">
-          <h2>About Our Company</h2>
-          <p>We are a dedicated team of professionals committed to delivering exceptional web solutions and services. Our company was founded on the principles of innovation, quality, and customer satisfaction.</p>
-
-          <h3>Our Mission</h3>
-          <p>To provide cutting-edge web technologies and design solutions that help businesses establish a strong online presence and achieve their digital goals.</p>
-
-          <h3>Our Values</h3>
-          <ul>
-            <li><strong>Innovation:</strong> Staying ahead with the latest web technologies</li>
-            <li><strong>Quality:</strong> Delivering excellence in every project</li>
-            <li><strong>Accessibility:</strong> Making the web inclusive for everyone</li>
-            <li><strong>Performance:</strong> Building fast, efficient solutions</li>
-            <li><strong>Sustainability:</strong> Creating environmentally conscious digital solutions</li>
-          </ul>
-
-          <h3>Our Team</h3>
-          <p>Our diverse team brings together experts in web development, design, user experience, and digital strategy. We collaborate closely to ensure every project meets the highest standards of quality and innovation.</p>
-        </div>
-
-        <div class="tab-panel" id="panel3">
-          <h2>Our Services</h2>
-          <p>We offer a comprehensive range of web development and design services tailored to meet your specific business needs.</p>
-
-          <h3>Web Development</h3>
-          <ul>
-            <li>Static website development with HTML5 and CSS3</li>
-            <li>Responsive design for all devices</li>
-            <li>Performance optimization</li>
-            <li>Search engine optimization (SEO)</li>
-            <li>Website maintenance and updates</li>
-          </ul>
-
-          <h3>Design Services</h3>
-          <ul>
-            <li>User interface (UI) design</li>
-            <li>User experience (UX) consulting</li>
-            <li>Brand identity development</li>
-            <li>Accessibility auditing</li>
-            <li>Design system creation</li>
-          </ul>
-
-          <h3>Technical Solutions</h3>
-          <ul>
-            <li>GitHub Pages deployment</li>
-            <li>Content management systems</li>
-            <li>Site hosting and domain setup</li>
-            <li>Analytics implementation</li>
-            <li>Performance monitoring</li>
-          </ul>
-
-          <p>All our services focus on creating modern, accessible, and high-performing web solutions that deliver real business value.</p>
-        </div>
-
-        <div class="tab-panel" id="panel4">
-          <h2>Contact Us</h2>
-          <p>Ready to start your next web project? We'd love to hear from you and discuss how we can help bring your vision to life.</p>
-
-          <h3>Get In Touch</h3>
-          <div class="contact-info">
-            <p><strong>Email:</strong> hello@ourwebsite.com</p>
-            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-            <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+        <div class="tab-content">
+          <div class="tab-panel" id="home-panel1">
+            <h2>Project Excellence</h2>
+            <p>This remarkable project showcases the perfect blend of modern web technologies and thoughtful design principles. Built with pure HTML5 and CSS, it demonstrates that simplicity and elegance can coexist beautifully.</p>
+            <h3>What Makes This Project Special</h3>
+            <ul>
+              <li>Zero JavaScript framework dependencies - pure, lightweight code</li>
+              <li>Responsive design that works flawlessly on all devices</li>
+              <li>Semantic HTML5 structure for excellent accessibility</li>
+              <li>Clean, maintainable codebase that's easy to understand</li>
+              <li>Fast loading times with minimal resource overhead</li>
+            </ul>
+            <p>Every aspect of this project has been carefully crafted to deliver an exceptional user experience while maintaining technical excellence.</p>
           </div>
 
-          <h3>Office Location</h3>
-          <div class="office-info">
-            <p>123 Web Design Street<br>
-            Digital City, DC 12345<br>
-            United States</p>
+          <div class="tab-panel" id="home-panel2">
+            <h2>Innovation &amp; Quality</h2>
+            <p>This project represents a paradigm shift in how we approach web development. By embracing simplicity and focusing on core web standards, we've created something truly remarkable.</p>
+            <h3>Innovative Approaches</h3>
+            <ul>
+              <li>CSS-only interactive elements that rival JavaScript solutions</li>
+              <li>Smart use of modern CSS features for dynamic theming</li>
+              <li>Accessibility-first design philosophy throughout</li>
+              <li>GitHub Issues-driven content management workflow</li>
+              <li>Automated deployment through GitHub Pages</li>
+            </ul>
+            <p>The quality of this project shines through in every detail, from the thoughtful color scheme to the carefully crafted typography and spacing.</p>
           </div>
 
-          <h3>Project Inquiries</h3>
-          <p>For project quotes and consultations, please include the following information in your message:</p>
-          <ul>
-            <li>Brief description of your project</li>
-            <li>Timeline requirements</li>
-            <li>Budget range</li>
-            <li>Any specific technical requirements</li>
-          </ul>
-
-          <p>We typically respond to all inquiries within 24 hours during business days. We look forward to working with you!</p>
+          <div class="tab-panel" id="home-panel3">
+            <h2>Future Vision</h2>
+            <p>This project isn't just about what we've built today - it's about establishing a foundation for the future. The architectural decisions made here will support growth and evolution.</p>
+            <h3>Looking Ahead</h3>
+            <ul>
+              <li>Extensible structure that can grow with new requirements</li>
+              <li>Sustainable development practices for long-term maintenance</li>
+              <li>Community-driven improvement through transparent workflows</li>
+              <li>Performance benchmarks that set new standards</li>
+              <li>Environmental consciousness through minimal resource usage</li>
+            </ul>
+            <p>We're not just building a website - we're creating a template for how modern web development should be approached: thoughtfully, sustainably, and with genuine care for the end user.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="content-section">
+      <div class="section-content">
+        <h2>About Our Company</h2>
+        <p>We are a dedicated team of professionals committed to delivering exceptional web solutions and services. Our company was founded on the principles of innovation, quality, and customer satisfaction.</p>
+
+        <h3>Our Mission</h3>
+        <p>To provide cutting-edge web technologies and design solutions that help businesses establish a strong online presence and achieve their digital goals.</p>
+
+        <h3>Our Values</h3>
+        <ul>
+          <li><strong>Innovation:</strong> Staying ahead with the latest web technologies</li>
+          <li><strong>Quality:</strong> Delivering excellence in every project</li>
+          <li><strong>Accessibility:</strong> Making the web inclusive for everyone</li>
+          <li><strong>Performance:</strong> Building fast, efficient solutions</li>
+          <li><strong>Sustainability:</strong> Creating environmentally conscious digital solutions</li>
+        </ul>
+
+        <h3>Our Team</h3>
+        <p>Our diverse team brings together experts in web development, design, user experience, and digital strategy. We collaborate closely to ensure every project meets the highest standards of quality and innovation.</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-section" class="content-section">
+      <div class="section-content">
+        <h2>Our Services</h2>
+        <p>We offer a comprehensive range of web development and design services tailored to meet your specific business needs.</p>
+
+        <h3>Web Development</h3>
+        <ul>
+          <li>Static website development with HTML5 and CSS3</li>
+          <li>Responsive design for all devices</li>
+          <li>Performance optimization</li>
+          <li>Search engine optimization (SEO)</li>
+          <li>Website maintenance and updates</li>
+        </ul>
+
+        <h3>Design Services</h3>
+        <ul>
+          <li>User interface (UI) design</li>
+          <li>User experience (UX) consulting</li>
+          <li>Brand identity development</li>
+          <li>Accessibility auditing</li>
+          <li>Design system creation</li>
+        </ul>
+
+        <h3>Technical Solutions</h3>
+        <ul>
+          <li>GitHub Pages deployment</li>
+          <li>Content management systems</li>
+          <li>Site hosting and domain setup</li>
+          <li>Analytics implementation</li>
+          <li>Performance monitoring</li>
+        </ul>
+
+        <p>All our services focus on creating modern, accessible, and high-performing web solutions that deliver real business value.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="content-section">
+      <div class="section-content">
+        <h2>Contact Us</h2>
+        <p>Ready to start your next web project? We'd love to hear from you and discuss how we can help bring your vision to life.</p>
+
+        <h3>Get In Touch</h3>
+        <div class="contact-info">
+          <p><strong>Email:</strong> hello@ourwebsite.com</p>
+          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+          <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+        </div>
+
+        <h3>Office Location</h3>
+        <div class="office-info">
+          <p>123 Web Design Street<br>
+          Digital City, DC 12345<br>
+          United States</p>
+        </div>
+
+        <h3>Project Inquiries</h3>
+        <p>For project quotes and consultations, please include the following information in your message:</p>
+        <ul>
+          <li>Brief description of your project</li>
+          <li>Timeline requirements</li>
+          <li>Budget range</li>
+          <li>Any specific technical requirements</li>
+        </ul>
+
+        <p>We typically respond to all inquiries within 24 hours during business days. We look forward to working with you!</p>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>This site is fully static and updated via GitHub Issues.</p>
   </footer>
+
+  <script>
+    function showSection(sectionName) {
+      // Hide all content sections
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionName + '-section');
+      if (selectedSection) {
+        selectedSection.classList.add('active');
+      }
+
+      // Update navigation active state
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+      
+      const activeLink = document.querySelector(`nav a[href="#${sectionName}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+
+    // Set initial active state for home on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      showSection('home');
+    });
+  </script>
 </body>
 </html>
