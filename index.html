@@ -3,18 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hello World</title>
+  <title>Static Website</title>
   <meta name="description" content="Static GitHub Pages site" />
   <link rel="preload" href="assets/css/styles.css" as="style" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+  <header>
+    <h1>Welcome to Our Website</h1>
+    <p>A simple static site built with HTML5 and CSS</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <h1>Hello World</h1>
-    <p class="tagline">This site is fully static and updated via GitHub Issues.</p>
+    <div class="tabs">
+      <input type="radio" id="tab1" name="tab-group" checked>
+      <label for="tab1">Overview</label>
+      
+      <input type="radio" id="tab2" name="tab-group">
+      <label for="tab2">Features</label>
+      
+      <input type="radio" id="tab3" name="tab-group">
+      <label for="tab3">Technology</label>
+
+      <div class="tab-content">
+        <div class="tab-panel" id="panel1">
+          <h2>Welcome Overview</h2>
+          <p>This is a modern static website built with pure HTML5 and CSS. No JavaScript frameworks or complex build processes are needed.</p>
+          <p>The site features a clean, responsive design that works well on both desktop and mobile devices. It uses semantic HTML elements and follows accessibility best practices.</p>
+        </div>
+
+        <div class="tab-panel" id="panel2">
+          <h2>Key Features</h2>
+          <ul>
+            <li>Fully responsive design</li>
+            <li>Dark and light theme support</li>
+            <li>Semantic HTML5 structure</li>
+            <li>CSS-only tabbed navigation</li>
+            <li>Fast loading times</li>
+            <li>Accessible design</li>
+          </ul>
+          <p>All features are implemented using standard web technologies without any external dependencies.</p>
+        </div>
+
+        <div class="tab-panel" id="panel3">
+          <h2>Technology Stack</h2>
+          <p>This website is built using:</p>
+          <ul>
+            <li><strong>HTML5:</strong> Modern semantic markup</li>
+            <li><strong>CSS3:</strong> Responsive styling with grid and flexbox</li>
+            <li><strong>GitHub Pages:</strong> Free static site hosting</li>
+            <li><strong>No JavaScript:</strong> Pure CSS interactions</li>
+          </ul>
+          <p>The tabbed interface is created using CSS radio button techniques, providing smooth transitions without any scripting.</p>
+        </div>
+      </div>
+    </div>
   </main>
+
   <footer>
-    <span>&copy; 2025</span>
+    <p>This site is fully static and updated via GitHub Issues.</p>
   </footer>
 </body>
 </html>
