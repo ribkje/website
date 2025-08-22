@@ -119,11 +119,61 @@ After making any changes, ALWAYS execute this complete scenario:
 For every change, verify:
 - [ ] HTML is valid semantic markup
 - [ ] CSS loads and applies correctly
-- [ ] Site displays "Hello World" heading (or updated content)
-- [ ] Footer shows "© 2025" (or current year)
+- [ ] Site displays "Welcome to Our Website" heading (or updated content)
+- [ ] Footer shows appropriate copyright information
 - [ ] Responsive design works on different viewport sizes
 - [ ] Both light and dark color schemes function
 - [ ] All relative paths resolve correctly
+- [ ] SEO requirements are met (see SEO Compliance section)
+
+## SEO Compliance Requirements
+
+### Mandatory SEO Elements
+For the website to be fully SEO compliant, ensure:
+
+1. **HTML Structure**:
+   - Semantic HTML5 elements (header, nav, main, section, article, footer)
+   - Proper heading hierarchy (h1 > h2 > h3, etc.)
+   - Valid HTML markup (use npx html-validate)
+
+2. **Meta Tags**:
+   - Descriptive, unique page title (50-60 characters)
+   - Meta description (150-160 characters)
+   - Meta keywords (relevant to content)
+   - Meta author information
+   - Canonical URL
+   - Proper charset and viewport declarations
+
+3. **Content Requirements**:
+   - Unique, valuable content for each section
+   - Proper keyword usage (natural, not stuffed)
+   - Clear headings and subheadings
+   - Alt text for all images
+   - Internal linking structure
+
+4. **Technical SEO**:
+   - Fast loading times (static site advantage)
+   - Mobile-responsive design
+   - Clean URL structure
+   - No broken links
+   - Proper HTML semantics
+
+### SEO Content Guidelines
+- **Home Section**: Overview with primary keywords, value proposition
+- **About Section**: Company information, mission, values, team details
+- **Services Section**: Detailed service descriptions with relevant keywords
+- **Contact Section**: Complete contact information, business hours, location
+
+### SEO Validation Steps
+1. Validate HTML structure: `npx html-validate index.html`
+2. Check meta tags are present and descriptive
+3. Verify heading hierarchy (h1 → h2 → h3)
+4. Ensure content is unique and valuable
+5. Test responsive design across devices
+6. Verify fast loading times with static server
+
+**Example SEO-compliant title**: "Welcome to Our Website - Professional Services & Solutions"
+**Example meta description**: "Professional services and solutions with modern web design. Learn about our company, services, and get in touch with our expert team."
 
 ## Technology Constraints
 
