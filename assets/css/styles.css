@@ -111,7 +111,8 @@ main {
 
 .tabs input[type="radio"]:nth-of-type(1):checked ~ .tab-content #panel1,
 .tabs input[type="radio"]:nth-of-type(2):checked ~ .tab-content #panel2,
-.tabs input[type="radio"]:nth-of-type(3):checked ~ .tab-content #panel3 {
+.tabs input[type="radio"]:nth-of-type(3):checked ~ .tab-content #panel3,
+.tabs input[type="radio"]:nth-of-type(4):checked ~ .tab-content #panel4 {
   display: block;
 }
 
@@ -137,6 +138,15 @@ main {
 
 .tab-panel strong {
   color: #e2e8f0;
+}
+
+/* Contact section styles */
+.contact-info, .office-info {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(45, 55, 72, 0.3);
+  border-radius: 0.5rem;
+  border-left: 3px solid #4299e1;
 }
 
 /* Footer styles */
@@ -233,6 +243,11 @@ footer {
   
   .tab-panel strong {
     color: #2d3748;
+  }
+  
+  .contact-info, .office-info {
+    background: rgba(226, 232, 240, 0.5);
+    border-left-color: #3182ce;
   }
   
   footer {
