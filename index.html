@@ -17,18 +17,24 @@
     <p>A simple static site built with HTML5 and CSS</p>
   </header>
 
+  <!-- Hidden radio inputs for section navigation -->
+  <input type="radio" id="nav-home" name="nav-section" checked hidden>
+  <input type="radio" id="nav-about" name="nav-section" hidden>
+  <input type="radio" id="nav-services" name="nav-section" hidden>
+  <input type="radio" id="nav-contact" name="nav-section" hidden>
+
   <nav>
     <ul>
-      <li><a href="#home" onclick="showSection('home')">Home</a></li>
-      <li><a href="#about" onclick="showSection('about')">About</a></li>
-      <li><a href="#services" onclick="showSection('services')">Services</a></li>
-      <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+      <li><label for="nav-home">Home</label></li>
+      <li><label for="nav-about">About</label></li>
+      <li><label for="nav-services">Services</label></li>
+      <li><label for="nav-contact">Contact</label></li>
     </ul>
   </nav>
 
   <main>
     <!-- Home Section with tabs -->
-    <section id="home-section" class="content-section active">
+    <section id="home-section" class="content-section">
       <div class="tabs">
         <input type="radio" id="home-tab1" name="home-tab-group" checked>
         <label for="home-tab1">Project Excellence</label>
@@ -86,7 +92,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about-section" class="content-section" hidden>
+    <section id="about-section" class="content-section">
       <div class="section-content">
         <h2>About Our Company</h2>
         <p>We are a dedicated team of professionals committed to delivering exceptional web solutions and services. Our company was founded on the principles of innovation, quality, and customer satisfaction.</p>
@@ -109,7 +115,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services-section" class="content-section" hidden>
+    <section id="services-section" class="content-section">
       <div class="section-content">
         <h2>Our Services</h2>
         <p>We offer a comprehensive range of web development and design services tailored to meet your specific business needs.</p>
@@ -146,7 +152,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact-section" class="content-section" hidden>
+    <section id="contact-section" class="content-section">
       <div class="section-content">
         <h2>Contact Us</h2>
         <p>Ready to start your next web project? We'd love to hear from you and discuss how we can help bring your vision to life.</p>
@@ -183,38 +189,6 @@
     <p>This site is fully static and updated via GitHub Issues.</p>
   </footer>
 
-  <script>
-    function showSection(sectionName) {
-      // Hide all content sections
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-        section.hidden = true;
-      });
 
-      // Show the selected section
-      const selectedSection = document.getElementById(sectionName + '-section');
-      if (selectedSection) {
-        selectedSection.classList.add('active');
-        selectedSection.hidden = false;
-      }
-
-      // Update navigation active state
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-      });
-      
-      const activeLink = document.querySelector(`nav a[href="#${sectionName}"]`);
-      if (activeLink) {
-        activeLink.classList.add('active');
-      }
-    }
-
-    // Set initial active state for home on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      showSection('home');
-    });
-  </script>
 </body>
 </html>
