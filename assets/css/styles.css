@@ -37,6 +37,11 @@ nav {
   border-bottom: 1px solid #2d3748;
 }
 
+/* Hide navigation radio inputs */
+nav input[type="radio"] {
+  display: none;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -46,16 +51,26 @@ nav ul {
   gap: 2rem;
 }
 
-nav a {
+nav label {
   color: #e2e8f0;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   transition: background-color 0.2s;
+  cursor: pointer;
+  display: inline-block;
 }
 
-nav a:hover,
-nav a.active {
+nav label:hover {
+  background: #2d3748;
+  color: #fff;
+}
+
+/* Active navigation state */
+#nav-home:checked ~ nav ul li:nth-of-type(1) label,
+#nav-about:checked ~ nav ul li:nth-of-type(2) label,
+#nav-services:checked ~ nav ul li:nth-of-type(3) label,
+#nav-contact:checked ~ nav ul li:nth-of-type(4) label {
   background: #2d3748;
   color: #fff;
 }
@@ -74,7 +89,11 @@ main {
   display: none;
 }
 
-.content-section.active {
+/* Show sections based on navigation radio state */
+#nav-home:checked ~ main #home-section,
+#nav-about:checked ~ main #about-section,
+#nav-services:checked ~ main #services-section,
+#nav-contact:checked ~ main #contact-section {
   display: block;
 }
 
@@ -243,12 +262,19 @@ footer {
     border-bottom-color: #cbd5e0;
   }
   
-  nav a {
+  nav label {
     color: #2d3748;
   }
   
-  nav a:hover,
-  nav a.active {
+  nav label:hover {
+    background: #cbd5e0;
+    color: #1a202c;
+  }
+  
+  #nav-home:checked ~ nav ul li:nth-of-type(1) label,
+  #nav-about:checked ~ nav ul li:nth-of-type(2) label,
+  #nav-services:checked ~ nav ul li:nth-of-type(3) label,
+  #nav-contact:checked ~ nav ul li:nth-of-type(4) label {
     background: #cbd5e0;
     color: #1a202c;
   }
