@@ -86,7 +86,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about-section" class="content-section">
+    <section id="about-section" class="content-section" hidden>
       <div class="section-content">
         <h2>About Our Company</h2>
         <p>We are a dedicated team of professionals committed to delivering exceptional web solutions and services. Our company was founded on the principles of innovation, quality, and customer satisfaction.</p>
@@ -109,7 +109,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services-section" class="content-section">
+    <section id="services-section" class="content-section" hidden>
       <div class="section-content">
         <h2>Our Services</h2>
         <p>We offer a comprehensive range of web development and design services tailored to meet your specific business needs.</p>
@@ -146,7 +146,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact-section" class="content-section">
+    <section id="contact-section" class="content-section" hidden>
       <div class="section-content">
         <h2>Contact Us</h2>
         <p>Ready to start your next web project? We'd love to hear from you and discuss how we can help bring your vision to life.</p>
@@ -189,12 +189,14 @@
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(section => {
         section.classList.remove('active');
+        section.hidden = true;
       });
 
       // Show the selected section
       const selectedSection = document.getElementById(sectionName + '-section');
       if (selectedSection) {
         selectedSection.classList.add('active');
+        selectedSection.hidden = false;
       }
 
       // Update navigation active state
