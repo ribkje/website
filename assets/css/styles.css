@@ -1,14 +1,20 @@
 /* Base minimal styles for the static site */
-* { box-sizing: border-box; }
-html { font-family: system-ui, Arial, sans-serif; line-height: 1.4; -webkit-text-size-adjust: 100%; }
-body { 
-  margin: 0; 
-  padding: 0; 
-  min-height: 100dvh; 
-  display: flex; 
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  display: flex;
   flex-direction: column;
-  background: #0f1115; 
-  color: #f5f7fa; 
+  background: #0f1115;
+  color: #f5f7fa;
 }
 
 /* Header styles */
@@ -66,7 +72,7 @@ nav input[type="radio"],
 
 .hamburger-icon::before,
 .hamburger-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 3px;
@@ -256,7 +262,8 @@ main {
 }
 
 /* Contact section styles */
-.contact-info, .office-info {
+.contact-info,
+.office-info {
   margin: 1rem 0;
   padding: 1rem;
   background: rgba(45, 55, 72, 0.3);
@@ -279,11 +286,11 @@ footer {
   /* Show hamburger menu */
   .hamburger-menu {
     display: flex;
-    position: absolute;
-    top: 0.5rem;
+    position: relative;
+    float: right;
     right: 1rem;
   }
-  
+
   /* Hide navigation menu by default */
   .nav-menu {
     flex-direction: column;
@@ -302,29 +309,29 @@ footer {
     transition: all 0.3s ease;
     z-index: 50;
   }
-  
+
   /* Show navigation menu when hamburger is checked */
   #mobile-menu-toggle:checked ~ nav .nav-menu {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
+
   /* Make nav position relative for absolute positioning of menu */
   nav {
     position: relative;
   }
-  
+
   main {
     padding: 1rem;
   }
-  
+
   .tabs label {
     display: block;
     margin: 0 0 0.25rem 0;
     border-radius: 0.5rem;
   }
-  
+
   .tab-content {
     border-radius: 0.5rem;
     padding: 1.5rem;
@@ -333,40 +340,40 @@ footer {
 
 /* Light prefers-color-scheme variant */
 @media (prefers-color-scheme: light) {
-  body { 
-    background: #f7f9fc; 
-    color: #1c2128; 
+  body {
+    background: #f7f9fc;
+    color: #1c2128;
   }
-  
+
   header {
     border-bottom-color: #e2e8f0;
   }
-  
+
   header p {
     color: #5a636e;
   }
-  
+
   nav {
     background: #e2e8f0;
     border-bottom-color: #cbd5e0;
   }
-  
+
   nav label {
     color: #2d3748;
   }
-  
+
   nav label:hover {
     background: #cbd5e0;
     color: #1a202c;
   }
-  
+
   /* Light theme hamburger icon */
   .hamburger-icon,
   .hamburger-icon::before,
   .hamburger-icon::after {
     background: #2d3748;
   }
-  
+
   /* Light theme mobile menu */
   @media (max-width: 768px) {
     .nav-menu {
@@ -374,7 +381,7 @@ footer {
       border-top-color: #cbd5e0;
     }
   }
-  
+
   #nav-home:checked ~ nav .nav-menu li:nth-of-type(1) label,
   #nav-about:checked ~ nav .nav-menu li:nth-of-type(2) label,
   #nav-services:checked ~ nav .nav-menu li:nth-of-type(3) label,
@@ -382,54 +389,55 @@ footer {
     background: #cbd5e0;
     color: #1a202c;
   }
-  
+
   .tabs label {
     background: #e2e8f0;
     color: #4a5568;
   }
-  
+
   .tabs label:hover {
     background: #cbd5e0;
     color: #2d3748;
   }
-  
+
   .tabs input[type="radio"]:checked + label {
     background: #3182ce;
     color: #fff;
   }
-  
+
   .tab-content {
     background: #fff;
     border: 1px solid #e2e8f0;
   }
-  
+
   .section-content {
     background: #fff;
     border: 1px solid #e2e8f0;
   }
-  
+
   .tab-panel h2,
   .section-content h2 {
     color: #2d3748;
   }
-  
+
   .tab-panel p,
   .tab-panel ul,
   .section-content p,
   .section-content ul {
     color: #4a5568;
   }
-  
+
   .tab-panel strong,
   .section-content strong {
     color: #2d3748;
   }
-  
-  .contact-info, .office-info {
+
+  .contact-info,
+  .office-info {
     background: rgba(226, 232, 240, 0.5);
     border-left-color: #3182ce;
   }
-  
+
   footer {
     background: #e2e8f0;
     border-top-color: #cbd5e0;
