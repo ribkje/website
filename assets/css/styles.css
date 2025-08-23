@@ -37,12 +37,68 @@ nav {
   border-bottom: 1px solid #2d3748;
 }
 
-/* Hide navigation radio inputs */
-nav input[type="radio"] {
+/* Hide navigation radio inputs and mobile toggle */
+nav input[type="radio"],
+#mobile-menu-toggle {
   display: none;
 }
 
-nav ul {
+/* Hamburger menu button - hidden by default */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger-icon {
+  position: relative;
+  width: 24px;
+  height: 3px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
+/* Hamburger animation when active */
+#mobile-menu-toggle:checked ~ nav .hamburger-icon {
+  background: transparent;
+}
+
+#mobile-menu-toggle:checked ~ nav .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#mobile-menu-toggle:checked ~ nav .hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.nav-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -67,10 +123,10 @@ nav label:hover {
 }
 
 /* Active navigation state */
-#nav-home:checked ~ nav ul li:nth-of-type(1) label,
-#nav-about:checked ~ nav ul li:nth-of-type(2) label,
-#nav-services:checked ~ nav ul li:nth-of-type(3) label,
-#nav-contact:checked ~ nav ul li:nth-of-type(4) label {
+#nav-home:checked ~ nav .nav-menu li:nth-of-type(1) label,
+#nav-about:checked ~ nav .nav-menu li:nth-of-type(2) label,
+#nav-services:checked ~ nav .nav-menu li:nth-of-type(3) label,
+#nav-contact:checked ~ nav .nav-menu li:nth-of-type(4) label {
   background: #2d3748;
   color: #fff;
 }
@@ -220,10 +276,43 @@ footer {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  nav ul {
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+  
+  /* Hide navigation menu by default */
+  .nav-menu {
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a202c;
+    border-top: 1px solid #2d3748;
+    padding: 1rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+  }
+  
+  /* Show navigation menu when hamburger is checked */
+  #mobile-menu-toggle:checked ~ nav .nav-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Make nav position relative for absolute positioning of menu */
+  nav {
+    position: relative;
   }
   
   main {
@@ -271,10 +360,25 @@ footer {
     color: #1a202c;
   }
   
-  #nav-home:checked ~ nav ul li:nth-of-type(1) label,
-  #nav-about:checked ~ nav ul li:nth-of-type(2) label,
-  #nav-services:checked ~ nav ul li:nth-of-type(3) label,
-  #nav-contact:checked ~ nav ul li:nth-of-type(4) label {
+  /* Light theme hamburger icon */
+  .hamburger-icon,
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    background: #2d3748;
+  }
+  
+  /* Light theme mobile menu */
+  @media (max-width: 768px) {
+    .nav-menu {
+      background: #e2e8f0;
+      border-top-color: #cbd5e0;
+    }
+  }
+  
+  #nav-home:checked ~ nav .nav-menu li:nth-of-type(1) label,
+  #nav-about:checked ~ nav .nav-menu li:nth-of-type(2) label,
+  #nav-services:checked ~ nav .nav-menu li:nth-of-type(3) label,
+  #nav-contact:checked ~ nav .nav-menu li:nth-of-type(4) label {
     background: #cbd5e0;
     color: #1a202c;
   }
